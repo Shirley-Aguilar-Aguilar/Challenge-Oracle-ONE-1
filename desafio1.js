@@ -3,6 +3,8 @@ function imprimir(frase){
   }
 
 
+let encriptedText = "";
+
 function encriptarTexto(){
     let textFromUI= document.getElementById("inputUsuario").value;
     console.log("mi textFromUI es:: " + textFromUI);
@@ -37,9 +39,16 @@ function encriptarTexto(){
           
     document.getElementById("inputEncriptado").value = output;
 
+    encriptedText = output;
+
 }
 
 
-
-
-
+function textToClipboard() {
+    var dummy = document.createElement("textarea");;
+    document.body.appendChild(dummy);
+    dummy.value = encriptedText;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+}
