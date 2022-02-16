@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <title>Código secreto</title>
     <link rel="stylesheet" href="desafio1.css">
+    </br>
 </head>
-
 
 <body>
      <header>
          <h1> Código secreto </h1>
      </header>
 
-
-     <section>
-         <h4>Por favor ingrese solo letras minúsculas, sin acento  </h4>
-         <input id="inputUsuario" placeholder="Ingrese el texto aqui" >
-         <button onclick= "encriptarTexto();" > Encriptar! </button>
-         <button> Desencriptar! </button>
-
+     <section >
+        <div id="firstContainer">  
+          <h4>Por favor ingrese solo letras minúsculas, sin acento  </h4>
+          </br>
+          <input id="inputUsuario" placeholder="Ingrese el texto aqui" >
+          </br>
+          </br>
+           <button id="encriptarButton"  > Encriptar! </button>
+           <button  id="desencriptarButton"  > Desencriptar! </button>
+          </br>
+        </div>
+        <div id="secondContainer" >
+          <h3>Mensaje encriptado:  </h3>
+           </br>
+           <input id="inputEncriptado" placeholder="" >
+           </br>
+           </br>
+           <button id= copyButton >  Copiar! </button>
+         </div>
      </section>
-
-
-
-     <section>
-         <h3>Mensaje encriptado:  </h3>
-         <input id="inputEncriptado" placeholder="" >
-         <button onclick= "textToClipboard();">  Copiar! </button>
-
-     </section>
-
 
 <script src="desafio1.js">  </script>
 </body>
