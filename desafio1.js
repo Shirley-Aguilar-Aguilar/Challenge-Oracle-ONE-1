@@ -1,8 +1,3 @@
-function imprimir(frase){
-      document.write(frase);
-  }
-
-
 let encriptedText = "";
 
 function encriptarTexto(){
@@ -10,9 +5,7 @@ function encriptarTexto(){
     console.log("mi textFromUI es: " + textFromUI);
     let output = "";
 
-    for(let i=0; i < textFromUI.length; i++)
-    {
-
+    for (let i=0; i < textFromUI.length; i++){
         let singleCharacter = textFromUI.charAt(i);
 
         if (singleCharacter === "a"){
@@ -35,13 +28,10 @@ function encriptarTexto(){
         }          
     }
 
-    console.log("mi output es: " + output);
-          
+    console.log("mi output es: " + output);     
     document.getElementById("inputEncriptado").value = output;
-
     encriptedText = output;
     return output;
-
 }
 let encriptarButton =document.getElementById("encriptarButton");
 encriptarButton.addEventListener("click", encriptarTexto);
@@ -71,10 +61,7 @@ function desencriptarTexto(){
         
         document.getElementById("inputUsuario").value= finalWord ;
         console.log(finalWord);
-        
-       
     return finalWord ;
-
 }
 let desencriptarButton =document.getElementById("desencriptarButton");
 desencriptarButton.addEventListener("click", desencriptarTexto);
